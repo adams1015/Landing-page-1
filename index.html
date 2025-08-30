@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breakthrough Trading Course</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #f1f5f9;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      background: #1e293b;
+    }
+    header img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%; /* 👈 circle logo */
+      margin-right: 15px;
+    }
+    header h1 {
+      font-size: 22px;
+      color: white;
+    }
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #1e293b;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    h2 {
+      color: #38bdf8;
+    }
+    ul {
+      line-height: 1.7;
+    }
+    form {
+      margin-top: 25px;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    button {
+      width: 100%;
+      padding: 14px;
+      background: #38bdf8;
+      border: none;
+      border-radius: 6px;
+      font-size: 18px;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background: #0284c7;
+    }
+    .thank-you {
+      display: none;
+      padding: 20px;
+      background: #22c55e;
+      color: white;
+      text-align: center;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+    .affiliate {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .affiliate a {
+      display: inline-block;
+      background: #f59e0b;
+      color: white;
+      padding: 14px 24px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .affiliate a:hover {
+      background: #d97706;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- 👇 Replace with your logo -->
+    <img src="logo.png" alt="Logo">
+    <h1>The Breakthrough Trading Course (BTC)</h1>
+  </header>
+
+  <div class="container">
+    <p>
+      If you are looking for the most simplified but yet value-loaded trading course on the internet right now, you have it!  
+      At the end of this course, you could potentially start making as much as $500 (₦800K) monthly with our fail-proof system as a total beginner even before you know how to trade if you start now!
+    </p>
+
+    <h2>At the end of this course, you will be able to:</h2>
+    <ul>
+      <li>Understand the financial market</li>
+      <li>Spot opportunities to make money using my trading system</li>
+      <li>Master risk management (the foundation of trading success)</li>
+      <li>Analyze and take profitable trades on any market or instrument</li>
+    </ul>
+
+    <h2>Course Details:</h2>
+    <ul>
+      <li>🔰 Introduction to forex trading</li>
+      <li>🔰 Trading account creation & verification</li>
+      <li>🔰 MT5 complete interface explained</li>
+      <li>🔰 Suxessfx killer strategies & trading system</li>
+      <li>🔰 Risk management & backtesting</li>
+      <li>🔰 Fundamental (NEWS) trading: CPI, PPI & NFP</li>
+    </ul>
+
+    <h2>Bonuses:</h2>
+    <ul>
+      <li>✅ Lifetime access to our profitable traders community</li>
+      <li>✅ Copy & paste trading system for quick profits</li>
+      <li>✅ Access to my full forex library & cinema</li>
+      <li>✅ Crypto secrets that turned $60 → $4,000</li>
+      <li>✅ How to buy & pass prop firms easily</li>
+      <li>✅ Access to advanced trading sessions</li>
+      <li>✅ How to access up to $1000 trading capital in 90 days</li>
+      <li>✅ Premium trading tools & templates</li>
+    </ul>
+
+    <h2>Register Now:</h2>
+    <form id="signupForm">
+      <input type="text" id="name" placeholder="Enter your full name" required>
+      <input type="email" id="email" placeholder="Enter your email" required>
+      <button type="submit">Submit</button>
+    </form>
+
+    <div class="thank-you" id="thankYou">
+      🎉 Thank you for registering! Check your email for more details.
+    </div>
+
+    <div class="affiliate">
+      <a href="https://cutt.ly/3rKJl9wF" target="_blank">👉 Enroll in the Course Now</a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("signupForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      let name = document.getElementById("name").value;
+      let email = document.getElementById("email").value;
+
+      // Google Form endpoint with entry IDs
+      let url = "https://docs.google.com/forms/d/e/1FAIpQLScXLSf_HAOEchmzvuDdR0IoPJM8CSA7ZMN5CBvbJMZJgAX_XQ/formResponse?" +
+                "entry.432197637=" + encodeURIComponent(name) + 
+                "&entry.1266633088=" + encodeURIComponent(email);
+
+      // Submit without showing form
+      fetch(url, { method: "POST", mode: "no-cors" });
+
+      // Show thank you
+      document.getElementById("signupForm").style.display = "none";
+      document.getElementById("thankYou").style.display = "block";
+    });
+  </script>
+</body>
+</html>
